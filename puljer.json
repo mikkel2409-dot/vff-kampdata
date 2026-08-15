@@ -1,9 +1,45 @@
 {
+ "502346": {
+  "aargang": "U14",
+  "raekke": "U14 Drenge Liga 1 (2013) 11:11 - efterår 2026",
+  "seneste_kamp": "2026-11-21",
+  "type": "liga"
+ },
+ "502392": {
+  "aargang": "U13",
+  "raekke": "U13 Drenge Liga 1 (2014) 8:8 - efterår 2026",
+  "seneste_kamp": "2026-11-22",
+  "type": "liga"
+ },
  "504076": {
   "aargang": "U15",
   "raekke": "U15 Drenge/11:11 (2012) - DBU Jylland Pokal",
   "seneste_kamp": "2026-09-01",
   "type": "pokal"
+ },
+ "508665": {
+  "aargang": "U15",
+  "raekke": "U15 Drenge Ligaen 2026/27",
+  "seneste_kamp": "2027-06-19",
+  "type": "liga"
+ },
+ "508668": {
+  "aargang": "U17",
+  "raekke": "U17 Drenge Ligaen 2026/27",
+  "seneste_kamp": "2026-12-05",
+  "type": "liga"
+ },
+ "508670": {
+  "aargang": "U19",
+  "raekke": "U19 Drenge Ligaen 2026/27",
+  "seneste_kamp": "2026-12-05",
+  "type": "liga"
+ },
+ "511880": {
+  "aargang": "U17",
+  "raekke": "U16 Cup Drenge 2026/27",
+  "seneste_kamp": "2026-12-05",
+  "type": "u16cup"
  },
  "512452": {
   "aargang": "U14",

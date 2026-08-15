@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-Henter Viborg FF's trænings- og pokalkampe (U13-U19) fra dbu.dk og skriver
-dbu-data.json i samme format som klubbens liga-synk-worker, med match_type
-('venlig'/'pokal') på hver kamp.
+Henter ALLE Viborg FF-akademiets kampe (U13-U19) fra dbu.dk og skriver
+dbu-data.json: turneringskampe (førsteholdenes Liga 1/Ligaen), U16 Cup,
+trænings- og pokalkampe - med match_type på hver kamp
+('liga'/'u16cup'/'venlig'/'pokal').
 
 Mekanik:
   1) DBU's udvidede kampsøgning (kun KOMMENDE kampe) bruges til at OPDAGE
-     puljer, hvor Viborg FF har trænings- eller pokalkampe.
+     puljer, hvor Viborg FF's akademihold spiller - også når nye puljer
+     opstår ved sæson-/halvsæsonskifte eller nye pokalrunder.
   2) Alle kampe (inkl. resultater for spillede) parses fra puljernes
      kampprogram-sider. puljer.json husker kendte puljer, så resultater
      også samles op, efter at puljens sidste kamp er forsvundet fra
@@ -35,12 +37,12 @@ UA = {"User-Agent": "Mozilla/5.0 (kampprogram-synk; kontakt: Viborg FF akademi)"
 DA_WEEKDAYS = ["man.", "tirs.", "ons.", "tors.", "fre.", "lør.", "søn."]
 
 
-def hent(url, forsoeg=2):
-    """GET med ét gentaget forsøg - DBU's søgning er periodisk overbelastet."""
+def hent(url, forsoeg=2, timeout=30):
+    """GET med valgfrit gentaget forsøg - DBU er periodisk overbelastet."""
     for i in range(forsoeg):
         try:
             req = urllib.request.Request(url, headers=UA)
-            with urllib.request.urlopen(req, timeout=30) as r:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
                 return htmllib.unescape(r.read().decode("utf-8", errors="replace"))
         except Exception:
             if i + 1 == forsoeg:
@@ -56,13 +58,32 @@ def normaliser_holdnavn(navn):
     return navn.strip()
 
 
+VIBORG_ALIASER = {KLUBNAVN, "FK Viborg"}  # DBU Jylland-puljer skriver "FK Viborg"
+
+
 def er_viborg(navn):
-    return normaliser_holdnavn(navn) == KLUBNAVN
+    return normaliser_holdnavn(navn) in VIBORG_ALIASER
 
 
-def aargang_fra_raekkenavn(raekke):
-    m = re.match(r"(U\d{2})\b", raekke.strip())
-    return m.group(1) if m else None
+def klassificer_raekke(raekke):
+    """Række-navn -> (hold-på-siden, match_type), eller None hvis rækken ikke
+    hører til akademisiden. Kun FØRSTEHOLDENES ligarækker (Liga 1/Ligaen)
+    medtages; Liga 2+ og C-hold er andethold. Trænings- og pokalrækker
+    medtages for alle årgange (pokal er typisk rækkeholdene - bevidst valg)."""
+    r = raekke.strip()
+    if re.match(r"^U16 Cup Drenge", r):
+        return ("U17", "u16cup")  # U16 Cup vises under U17 på siden
+    m = re.match(r"^(U\d{2})\s+Drenge\b", r)
+    if not m or m.group(1) not in AARGANGE:
+        return None
+    aargang = m.group(1)
+    if "Træningskamp" in r:
+        return (aargang, "venlig")
+    if "Pokal" in r:
+        return (aargang, "pokal")
+    if re.match(r"^U1[579] Drenge Ligaen\b", r) or re.match(r"^U1[34] Drenge Liga 1\b", r):
+        return (aargang, "liga")
+    return None
 
 
 def parse_celler(raekke_html):
@@ -94,7 +115,9 @@ def soeg_puljer(idag):
         }
         url = "https://www.dbu.dk/resultater/kampsoegAdvanceret?" + urllib.parse.urlencode(params)
         try:
-            side = hent(url)
+            # Opdagelse må gerne fejle billigt: kørslen er daglig, og puljerne
+            # i puljer.json er alligevel rygraden - derfor kun ét kort forsøg.
+            side = hent(url, forsoeg=1, timeout=12)
         except Exception as e:
             print(f"  ADVARSEL: søgning union {union} fejlede: {e}", file=sys.stderr)
             continue
@@ -106,18 +129,15 @@ def soeg_puljer(idag):
                 continue
             pulje = m.group(2)
             celler = parse_celler(del_[:4000])
-            tekst = " | ".join(celler)
-            raekke_m = re.search(r"(U\d{2}[^|]*?(?:Træningskamp|Pokal)[^|]*)", tekst)
-            if not raekke_m:
+            raekke = next((c for c in celler if re.match(r"^U\d{2}\b", c) and ("Drenge" in c or "Cup" in c)), None)
+            if not raekke:
                 continue
-            raekke = raekke_m.group(1).strip()
-            aargang = aargang_fra_raekkenavn(raekke)
-            if aargang not in AARGANGE or "Drenge" not in raekke:
+            klass = klassificer_raekke(raekke)
+            if not klass:
                 continue
             if not any(er_viborg(c) for c in celler):
                 continue
-            match_type = "venlig" if "Træningskamp" in raekke else "pokal"
-            fundne[pulje] = {"type": match_type, "aargang": aargang, "raekke": raekke}
+            fundne[pulje] = {"type": klass[1], "aargang": klass[0], "raekke": raekke}
     return fundne
 
 
