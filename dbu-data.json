@@ -1,0 +1,81 @@
+{
+ "updated": "2026-08-15T21:43:02.013845+00:00",
+ "teams": {
+  "U13": [
+   {
+    "team": "U13",
+    "kampnr": "773092",
+    "pulje": "512470",
+    "match_type": "venlig",
+    "date_iso": "2026-08-15",
+    "weekday": "lør.",
+    "time": "10:00",
+    "home_team": "Silkeborg IF",
+    "away_team": "Viborg FF",
+    "venue": "Søholt Idrætsanlæg",
+    "score_home": null,
+    "score_away": null
+   },
+   {
+    "team": "U13",
+    "kampnr": "576854",
+    "pulje": "512464",
+    "match_type": "venlig",
+    "date_iso": "2026-11-14",
+    "weekday": "lør.",
+    "time": "13:00",
+    "home_team": "Haderslev FK",
+    "away_team": "Viborg FF",
+    "venue": "Haderslev Kunstgræsbane",
+    "score_home": null,
+    "score_away": null
+   }
+  ],
+  "U14": [
+   {
+    "team": "U14",
+    "kampnr": "773103",
+    "pulje": "512452",
+    "match_type": "venlig",
+    "date_iso": "2026-08-15",
+    "weekday": "lør.",
+    "time": "11:30",
+    "home_team": "Silkeborg IF",
+    "away_team": "Viborg FF",
+    "venue": "Søholt Idrætsanlæg",
+    "score_home": null,
+    "score_away": null
+   },
+   {
+    "team": "U14",
+    "kampnr": "570418",
+    "pulje": "512452",
+    "match_type": "venlig",
+    "date_iso": "2026-11-14",
+    "weekday": "lør.",
+    "time": "12:00",
+    "home_team": "Haderslev FK",
+    "away_team": "Viborg FF",
+    "venue": "Haderslev Kunstgræsbane",
+    "score_home": null,
+    "score_away": null
+   }
+  ],
+  "U15": [
+   {
+    "team": "U15",
+    "kampnr": "442239",
+    "pulje": "504076",
+    "match_type": "pokal",
+    "date_iso": "2026-09-01",
+    "weekday": "tirs.",
+    "time": "19:00",
+    "home_team": "Sorring/Voel",
+    "away_team": "Viborg FF",
+    "venue": "Voel Stadion",
+    "score_home": null,
+    "score_away": null
+   }
+  ]
+ }
+}

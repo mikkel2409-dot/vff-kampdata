@@ -1,0 +1,30 @@
+name: Hent DBU-kampdata
+
+on:
+  schedule:
+    - cron: '30 4 * * *'   # dagligt kl. 06:30 dansk sommertid / 05:30 vintertid
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  hent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Hent data fra DBU
+        run: python3 hent_dbu.py
+
+      - name: Commit ved ændringer
+        run: |
+          git config user.name "dbu-henter"
+          git config user.email "actions@users.noreply.github.com"
+          git add dbu-data.json puljer.json
+          if git diff --cached --quiet; then
+            echo "Ingen ændringer i dag."
+          else
+            git commit -m "DBU-opdatering $(date -u '+%Y-%m-%d %H:%M') UTC"
+            git push
+          fi

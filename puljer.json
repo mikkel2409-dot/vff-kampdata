@@ -1,0 +1,26 @@
+{
+ "504076": {
+  "aargang": "U15",
+  "raekke": "U15 Drenge/11:11 (2012) - DBU Jylland Pokal",
+  "seneste_kamp": "2026-09-01",
+  "type": "pokal"
+ },
+ "512452": {
+  "aargang": "U14",
+  "raekke": "U14 Drenge Liga 1 / Træningskamp",
+  "seneste_kamp": "2026-11-14",
+  "type": "venlig"
+ },
+ "512464": {
+  "aargang": "U13",
+  "raekke": "U13 Drenge Liga 1 / Træningskamp",
+  "seneste_kamp": "2026-11-14",
+  "type": "venlig"
+ },
+ "512470": {
+  "aargang": "U13",
+  "raekke": "U13 Drenge Liga 3 x 25 min. / Træningskamp",
+  "seneste_kamp": "2026-08-15",
+  "type": "venlig"
+ }
+}
