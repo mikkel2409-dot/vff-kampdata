@@ -21,7 +21,10 @@ jobs:
         run: |
           git config user.name "dbu-henter"
           git config user.email "actions@users.noreply.github.com"
-          git add dbu-data.json puljer.json
+          # Dagligt livstegn: uden aktivitet i 60 dage sætter GitHub cron-jobs på
+          # pause (fx hen over sommerpausen). Filen viser samtidig seneste kørsel.
+          date -u '+%Y-%m-%d %H:%M UTC' > senest-koert.txt
+          git add dbu-data.json puljer.json senest-koert.txt
           if git diff --cached --quiet; then
             echo "Ingen ændringer i dag."
           else
