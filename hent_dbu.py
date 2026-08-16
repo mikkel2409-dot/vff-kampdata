@@ -29,6 +29,7 @@ KLUBNAVN = "Viborg FF"
 UNIONER = [1, 2, 3, 4]          # DBU (landsdækkende), Sjælland, Jylland, Fyn
 AARGANGE = {"U13", "U14", "U15", "U17", "U19"}
 PULJE_STATE_FIL = "puljer.json"
+STEDER_FIL = "steder.json"      # cache: stadium-id -> adresse (til "Vis rute")
 UDDATA_FIL = "dbu-data.json"
 BEHOLD_PULJE_DAGE = 21          # puljer beholdes til 3 uger efter sidste VFF-kamp
 SOEGEVINDUE_DAGE = 300          # kampsøgningens fremtidsvindue (maks. 364)
@@ -141,6 +142,19 @@ def soeg_puljer(idag):
     return fundne
 
 
+def hent_stadium_adresse(stadium_id):
+    """Adresse fra DBU's spillested-side ('Adresse | Ansvej 110 | 8600 Silkeborg')."""
+    side = hent(f"https://www.dbu.dk/resultater/stadium/{stadium_id}", forsoeg=1, timeout=15)
+    tokens = [t.strip() for t in re.split(r"<[^>]+>", side) if t.strip()]
+    for i, t in enumerate(tokens):
+        if t == "Adresse" and i + 2 < len(tokens):
+            gade, postby = tokens[i + 1], tokens[i + 2]
+            if re.match(r"^\d{4}\s", postby):
+                return f"{gade}, {postby}"
+            return gade
+    return ""
+
+
 def parse_pulje(pulje_id, info):
     """Alle VFF-kampe i puljens kampprogram (kolonner: -, kampnr, dato, tid, hjemme, ude, spillested, resultat)."""
     side = hent(f"https://www.dbu.dk/resultater/pulje/{pulje_id}/kampprogram")
@@ -149,6 +163,7 @@ def parse_pulje(pulje_id, info):
         m = re.match(r"\('/resultater/kamp/(\d+)_(\d+)/kampinfo'\)", del_)
         if not m:
             continue
+        stadium_m = re.search(r"/resultater/stadium/(\d+)", del_[:6000])
         celler = parse_celler(del_[:6000])
         # celle 0 er tom/ikon; find kampnr-cellen og læs positionsbaseret derfra
         try:
@@ -175,6 +190,7 @@ def parse_pulje(pulje_id, info):
             "home_team": normaliser_holdnavn(hjemme),
             "away_team": normaliser_holdnavn(ude),
             "venue": sted,
+            "stadium": stadium_m.group(1) if stadium_m else None,
             "score_home": int(res_m.group(1)) if res_m else None,
             "score_away": int(res_m.group(2)) if res_m else None,
         })
@@ -188,6 +204,18 @@ def main():
             state = json.load(f)
     except FileNotFoundError:
         state = {}
+    try:
+        with open(STEDER_FIL, encoding="utf-8") as f:
+            steder = json.load(f)
+    except FileNotFoundError:
+        steder = {}
+    # Gårsdagens kampe bruges som reserve, hvis en enkelt pulje fejler i dag -
+    # ellers ville dens kampe mangle i feedet og blive fejl-flaget på siden.
+    try:
+        with open(UDDATA_FIL, encoding="utf-8") as f:
+            forrige_kampe = [k for ks in json.load(f).get("teams", {}).values() for k in ks]
+    except Exception:
+        forrige_kampe = []
 
     print(f"Søger kommende trænings-/pokalkampe for {KLUBNAVN} ...")
     fundne = soeg_puljer(idag)
@@ -202,7 +230,10 @@ def main():
         try:
             kampe = parse_pulje(pulje, info)
         except Exception as e:
-            print(f"  ADVARSEL: pulje {pulje} kunne ikke hentes: {e}", file=sys.stderr)
+            genbrug = [k for k in forrige_kampe if k.get("pulje") == pulje]
+            print(f"  ADVARSEL: pulje {pulje} kunne ikke hentes ({e})"
+                  + (f" - genbruger gårsdagens {len(genbrug)} kampe" if genbrug else ""), file=sys.stderr)
+            alle_kampe.extend(genbrug)
             fejlede += 1
             continue
         if kampe:
@@ -224,6 +255,17 @@ def main():
         print(f"  pulje {pulje} udgået (sidste kamp {state[pulje]['seneste_kamp']}) - fjernes")
         del state[pulje]
 
+    # Slå adresser op for nye spillesteder (cachen gør det til en engangsudgift)
+    manglende_steder = {k["stadium"] for k in alle_kampe if k.get("stadium")} - set(steder)
+    for sid in sorted(manglende_steder):
+        try:
+            steder[sid] = hent_stadium_adresse(sid)
+            time.sleep(0.5)
+        except Exception as e:
+            print(f"  ADVARSEL: adresse for spillested {sid} kunne ikke hentes: {e}", file=sys.stderr)
+    if manglende_steder:
+        print(f"  nye spillested-adresser hentet: {len(manglende_steder & set(steder))}")
+
     # Dublet-værn på kampnr og gruppering pr. årgang
     teams = {}
     set_ = set()
@@ -231,6 +273,7 @@ def main():
         if k["kampnr"] in set_:
             continue
         set_.add(k["kampnr"])
+        k["address"] = steder.get(k.pop("stadium", None) or "", "") or k.get("address", "")
         teams.setdefault(k["team"], []).append(k)
 
     ud = {"updated": datetime.datetime.now(datetime.timezone.utc).isoformat(), "teams": teams}
@@ -238,6 +281,8 @@ def main():
         json.dump(ud, f, ensure_ascii=False, indent=1)
     with open(PULJE_STATE_FIL, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=1, sort_keys=True)
+    with open(STEDER_FIL, "w", encoding="utf-8") as f:
+        json.dump(steder, f, ensure_ascii=False, indent=1, sort_keys=True)
     print(f"Skrev {UDDATA_FIL}: " + ", ".join(f"{t}: {len(ks)}" for t, ks in sorted(teams.items())) or "tom")
 
 

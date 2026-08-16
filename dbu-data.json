@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-16T04:59:49.658682+00:00",
+ "updated": "2026-08-16T11:50:40.923865+00:00",
  "teams": {
   "U19": [
    {
@@ -14,7 +14,8 @@
     "away_team": "AGF",
     "venue": "Viborg FF´s anlæg",
     "score_home": 1,
-    "score_away": 3
+    "score_away": 3,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U19",
@@ -28,7 +29,8 @@
     "away_team": "Randers Freja FC",
     "venue": "Viborg FF´s anlæg",
     "score_home": 1,
-    "score_away": 2
+    "score_away": 2,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U19",
@@ -42,7 +44,8 @@
     "away_team": "FC Nordsjælland",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U19",
@@ -56,7 +59,8 @@
     "away_team": "Viborg FF",
     "venue": "Lyngby Stadion",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Lundtoftevej 61, 2800 Kgs.Lyngby"
    },
    {
     "team": "U19",
@@ -70,7 +74,8 @@
     "away_team": "Viborg FF",
     "venue": "AaB's Anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Hornevej 2, 9220 Aalborg Øst"
    },
    {
     "team": "U19",
@@ -84,7 +89,8 @@
     "away_team": "Brøndby",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U19",
@@ -98,7 +104,8 @@
     "away_team": "Viborg FF",
     "venue": "KB. P. Bangsvej",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Peter Bangs Vej 147, 2000 Frederiksberg"
    },
    {
     "team": "U19",
@@ -112,7 +119,8 @@
     "away_team": "Esbjerg",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U19",
@@ -126,7 +134,8 @@
     "away_team": "Viborg FF",
     "venue": "Capelli Sport Stadion, Køge Idrætspark",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Ved Stadion 6, 4600 Køge"
    },
    {
     "team": "U19",
@@ -140,7 +149,8 @@
     "away_team": "AC Horsens",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U19",
@@ -154,7 +164,8 @@
     "away_team": "Viborg FF",
     "venue": "OB-Ådalen",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Sdr. Boulevard 172, 5000 Odense C"
    },
    {
     "team": "U19",
@@ -168,7 +179,8 @@
     "away_team": "Viborg FF",
     "venue": "VB Parken",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Hellumvej 9, 7100 Vejle"
    }
   ],
   "U13": [
@@ -184,7 +196,8 @@
     "away_team": "Viborg FF",
     "venue": "Søholt Idrætsanlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Ansvej 110, 8600 Silkeborg"
    },
    {
     "team": "U13",
@@ -198,7 +211,8 @@
     "away_team": "Randers Freja",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U13",
@@ -212,7 +226,8 @@
     "away_team": "FK Viborg",
     "venue": "Søholt Idrætsanlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Ansvej 110, 8600 Silkeborg"
    },
    {
     "team": "U13",
@@ -226,7 +241,8 @@
     "away_team": "AaB",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U13",
@@ -240,7 +256,8 @@
     "away_team": "FK Viborg",
     "venue": "Herning Fremad's Kunstgræsbane 2",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Ringkøbingvej 78, 7400 Herning"
    },
    {
     "team": "U13",
@@ -254,7 +271,8 @@
     "away_team": "FK Viborg",
     "venue": "DS Arena - Kunstgræs (Hobro)",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Amerikavej 9A, 9500 Hobro"
    },
    {
     "team": "U13",
@@ -268,7 +286,8 @@
     "away_team": "Herning Fremad",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U13",
@@ -282,7 +301,8 @@
     "away_team": "FK Viborg",
     "venue": "Randers Stadion",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Viborgvej 92, 8920 Randers NV"
    },
    {
     "team": "U13",
@@ -296,7 +316,8 @@
     "away_team": "Silkeborg IF",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U13",
@@ -310,7 +331,8 @@
     "away_team": "FK Viborg",
     "venue": "AaB's Anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Hornevej 2, 9220 Aalborg Øst"
    },
    {
     "team": "U13",
@@ -324,7 +346,8 @@
     "away_team": "Viborg FF",
     "venue": "Haderslev Kunstgræsbane",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Stadionvej 5, 6100 Haderslev"
    },
    {
     "team": "U13",
@@ -338,7 +361,8 @@
     "away_team": "Hobro IK",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    }
   ],
   "U14": [
@@ -354,7 +378,8 @@
     "away_team": "Viborg FF",
     "venue": "Søholt Idrætsanlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Ansvej 110, 8600 Silkeborg"
    },
    {
     "team": "U14",
@@ -368,7 +393,8 @@
     "away_team": "Randers Freja",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U14",
@@ -382,7 +408,8 @@
     "away_team": "FK Viborg",
     "venue": "Søholt Idrætsanlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Ansvej 110, 8600 Silkeborg"
    },
    {
     "team": "U14",
@@ -396,7 +423,8 @@
     "away_team": "AaB",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U14",
@@ -410,7 +438,8 @@
     "away_team": "FK Viborg",
     "venue": "Herning Fremad's Kunstgræsbane 2",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Ringkøbingvej 78, 7400 Herning"
    },
    {
     "team": "U14",
@@ -424,7 +453,8 @@
     "away_team": "FK Viborg",
     "venue": "AGF's anlæg - Fredensvang",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Terp Skovvej 16, 8260 Viby J"
    },
    {
     "team": "U14",
@@ -438,7 +468,8 @@
     "away_team": "Herning Fremad",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U14",
@@ -452,7 +483,8 @@
     "away_team": "FK Viborg",
     "venue": "Randers Stadion, kunstgræs",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Viborgvej 92, 8920 Randers NV"
    },
    {
     "team": "U14",
@@ -466,7 +498,8 @@
     "away_team": "Silkeborg IF",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U14",
@@ -480,7 +513,8 @@
     "away_team": "FK Viborg",
     "venue": "AaB's Anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Hornevej 2, 9220 Aalborg Øst"
    },
    {
     "team": "U14",
@@ -494,7 +528,8 @@
     "away_team": "Viborg FF",
     "venue": "Haderslev Kunstgræsbane",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Stadionvej 5, 6100 Haderslev"
    },
    {
     "team": "U14",
@@ -508,7 +543,8 @@
     "away_team": "AGF, Aarhus",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    }
   ],
   "U15": [
@@ -524,7 +560,8 @@
     "away_team": "Randers Freja FC",
     "venue": "Viborg FF´s anlæg",
     "score_home": 0,
-    "score_away": 1
+    "score_away": 1,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U15",
@@ -538,7 +575,8 @@
     "away_team": "Viborg FF",
     "venue": "Voel Stadion",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Sorringvej 28, 8600 Silkeborg"
    },
    {
     "team": "U15",
@@ -552,7 +590,8 @@
     "away_team": "Viborg FF",
     "venue": "Lyngby Stadion",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Lundtoftevej 61, 2800 Kgs.Lyngby"
    },
    {
     "team": "U15",
@@ -566,7 +605,8 @@
     "away_team": "Viborg FF",
     "venue": "AaB's Anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Hornevej 2, 9220 Aalborg Øst"
    },
    {
     "team": "U15",
@@ -580,7 +620,8 @@
     "away_team": "Brøndby IF",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U15",
@@ -594,7 +635,8 @@
     "away_team": "Farum Boldklub",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U15",
@@ -608,7 +650,8 @@
     "away_team": "Viborg FF",
     "venue": "Kunst, KB, P. Bangs Vej",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Peter Bangs Vej 147, 2000 Frederiksberg"
    },
    {
     "team": "U15",
@@ -622,7 +665,8 @@
     "away_team": "AGF",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U15",
@@ -636,7 +680,8 @@
     "away_team": "Esbjerg fB",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U15",
@@ -650,7 +695,8 @@
     "away_team": "Viborg FF",
     "venue": "Herfølge Stadion",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Vordingborgvej 124, 4681 Herfølge"
    },
    {
     "team": "U15",
@@ -664,7 +710,8 @@
     "away_team": "AC Horsens",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U15",
@@ -678,7 +725,8 @@
     "away_team": "Viborg FF",
     "venue": "OB-Ådalen",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Sdr. Boulevard 172, 5000 Odense C"
    },
    {
     "team": "U15",
@@ -692,7 +740,8 @@
     "away_team": "Viborg FF",
     "venue": "VB Parken",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Hellumvej 9, 7100 Vejle"
    },
    {
     "team": "U15",
@@ -706,7 +755,8 @@
     "away_team": "AaB",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U15",
@@ -720,7 +770,8 @@
     "away_team": "HB Køge",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U15",
@@ -734,7 +785,8 @@
     "away_team": "Viborg FF",
     "venue": "AGF's anlæg - Fredensvang",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Terp Skovvej 16, 8260 Viby J"
    },
    {
     "team": "U15",
@@ -748,7 +800,8 @@
     "away_team": "Viborg FF",
     "venue": "Farum Park",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Farum Park 18, 3520 Farum"
    },
    {
     "team": "U15",
@@ -762,7 +815,8 @@
     "away_team": "Sønderjyske Fodbold",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U15",
@@ -776,7 +830,8 @@
     "away_team": "Viborg FF",
     "venue": "Søholt Idrætsanlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Ansvej 110, 8600 Silkeborg"
    },
    {
     "team": "U15",
@@ -790,7 +845,8 @@
     "away_team": "Lyngby",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U15",
@@ -804,7 +860,8 @@
     "away_team": "Vejle B",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U15",
@@ -818,7 +875,8 @@
     "away_team": "Viborg FF",
     "venue": "Randers Stadion, kunstgræs",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Viborgvej 92, 8920 Randers NV"
    },
    {
     "team": "U15",
@@ -832,7 +890,8 @@
     "away_team": "FC Midtjylland",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U15",
@@ -846,7 +905,8 @@
     "away_team": "Viborg FF",
     "venue": "Brøndby Stadion",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Brøndby Stadion 30, 2605 Brøndby"
    },
    {
     "team": "U15",
@@ -860,7 +920,8 @@
     "away_team": "Viborg FF",
     "venue": "Jydsk Miljø Rengøring - Kunst Arena 2",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Langmarksvej 59, 8700 Horsens"
    }
   ],
   "U17": [
@@ -876,7 +937,8 @@
     "away_team": "Randers Freja FC",
     "venue": "Viborg FF´s anlæg",
     "score_home": 3,
-    "score_away": 2
+    "score_away": 2,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U17",
@@ -890,7 +952,8 @@
     "away_team": "FC Nordsjælland",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U17",
@@ -904,7 +967,8 @@
     "away_team": "Viborg FF",
     "venue": "Lyngby Stadion",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Lundtoftevej 61, 2800 Kgs.Lyngby"
    },
    {
     "team": "U17",
@@ -918,7 +982,8 @@
     "away_team": "Viborg FF",
     "venue": "AaB's Anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Hornevej 2, 9220 Aalborg Øst"
    },
    {
     "team": "U17",
@@ -932,7 +997,8 @@
     "away_team": "Brøndby",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U17",
@@ -946,7 +1012,8 @@
     "away_team": "Viborg FF",
     "venue": "Hjørring IF's Anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Landlyst 9, 9800 Hjørring"
    },
    {
     "team": "U17",
@@ -960,7 +1027,8 @@
     "away_team": "AC Horsens",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U17",
@@ -974,7 +1042,8 @@
     "away_team": "Viborg FF",
     "venue": "Kunst, KB, P. Bangs Vej",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Peter Bangs Vej 147, 2000 Frederiksberg"
    },
    {
     "team": "U17",
@@ -988,7 +1057,8 @@
     "away_team": "AGF",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U17",
@@ -1002,7 +1072,8 @@
     "away_team": "Esbjerg",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U17",
@@ -1016,7 +1087,8 @@
     "away_team": "Viborg FF",
     "venue": "Herfølge Stadion",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Vordingborgvej 124, 4681 Herfølge"
    },
    {
     "team": "U17",
@@ -1030,7 +1102,8 @@
     "away_team": "Viborg FF",
     "venue": "AURA Park, IF Lyseng Fodbold",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Lysengvej 1, 8270 Højbjerg"
    },
    {
     "team": "U17",
@@ -1044,7 +1117,8 @@
     "away_team": "AC Horsens",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U17",
@@ -1058,7 +1132,8 @@
     "away_team": "Viborg FF",
     "venue": "OB-Ådalen",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Sdr. Boulevard 172, 5000 Odense C"
    },
    {
     "team": "U17",
@@ -1072,7 +1147,8 @@
     "away_team": "Hobro IK",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U17",
@@ -1086,7 +1162,8 @@
     "away_team": "Viborg FF",
     "venue": "VB Parken",
     "score_home": null,
-    "score_away": null
+    "score_away": null,
+    "address": "Hellumvej 9, 7100 Vejle"
    }
   ]
  }
