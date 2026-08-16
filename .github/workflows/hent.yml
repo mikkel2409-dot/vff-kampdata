@@ -31,3 +31,11 @@ jobs:
             git commit -m "DBU-opdatering $(date -u '+%Y-%m-%d %H:%M') UTC"
             git push
           fi
+
+      - name: Udgiv til Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          mkdir -p _netlify
+          cp index.html manifest.json ikon-192.png apple-touch-icon.png _netlify/
+          npx -y netlify-cli@17 deploy --prod --dir _netlify --site 7fb18b4f-0a04-49cc-847a-45281dc50e35
