@@ -24,7 +24,13 @@ jobs:
           # Dagligt livstegn: uden aktivitet i 60 dage sætter GitHub cron-jobs på
           # pause (fx hen over sommerpausen). Filen viser samtidig seneste kørsel.
           date -u '+%Y-%m-%d %H:%M UTC' > senest-koert.txt
-          git add dbu-data.json puljer.json steder.json senest-koert.txt
+          # Netlify skal kun have en ny deploy, når selve SIDEN er ændret -
+          # daglige dataopdateringer serveres fra GitHub og kræver ingen deploy.
+          gammel_sum=$(cat netlify-checksum.txt 2>/dev/null || true)
+          ny_sum=$(cat index.html manifest.json ikon-192.png apple-touch-icon.png | sha256sum | cut -d' ' -f1)
+          echo "$ny_sum" > netlify-checksum.txt
+          if [ "$gammel_sum" != "$ny_sum" ]; then echo "NETLIFY_DEPLOY=ja" >> "$GITHUB_ENV"; fi
+          git add dbu-data.json puljer.json steder.json senest-koert.txt netlify-checksum.txt
           if git diff --cached --quiet; then
             echo "Ingen ændringer i dag."
           else
@@ -32,7 +38,8 @@ jobs:
             git push
           fi
 
-      - name: Udgiv til Netlify
+      - name: Udgiv til Netlify (kun ved ændret side)
+        if: env.NETLIFY_DEPLOY == 'ja'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
