@@ -27,6 +27,9 @@ import urllib.parse
 
 KLUBNAVN = "Viborg FF"
 UNIONER = [1, 2, 3, 4]          # DBU (landsdækkende), Sjælland, Jylland, Fyn
+# U13, U14, U15, U16, U17, U19 i DBU-søgningens aldersgruppe-id'er. Uden dette
+# filter dækker søgningen ALLE aldersgrupper og timer ud på DBU's server.
+ALDERSGRUPPE_IDS = ["20", "19", "18", "17", "16", "30"]
 AARGANGE = {"U13", "U14", "U15", "U17", "U19"}
 PULJE_STATE_FIL = "puljer.json"
 STEDER_FIL = "steder.json"      # cache: stadium-id -> adresse (til "Vis rute")
@@ -110,15 +113,15 @@ def soeg_puljer(idag):
             "mode": "searchresult", "UnionId": str(union), "GenderId": "",
             "City": "", "Stadium": "", "Club": KLUBNAVN,
             "DateFrom": idag.strftime("%d-%m-%Y"), "DateTo": til.strftime("%d-%m-%Y"),
-            "ZipFrom": "", "ZipTo": "", "DivisionAgeGroupIdList": "",
+            "ZipFrom": "", "ZipTo": "", "DivisionAgeGroupIdList": ALDERSGRUPPE_IDS,
             "IncludeNormalMatches": "true", "IncludeTrainingMatches": "true",
             "IncludeCupMatches": "false",
         }
-        url = "https://www.dbu.dk/resultater/kampsoegAdvanceret?" + urllib.parse.urlencode(params)
+        url = "https://www.dbu.dk/resultater/kampsoegAdvanceret?" + urllib.parse.urlencode(params, doseq=True)
         try:
             # Opdagelse må gerne fejle billigt: kørslen er daglig, og puljerne
             # i puljer.json er alligevel rygraden - derfor kun ét kort forsøg.
-            side = hent(url, forsoeg=1, timeout=12)
+            side = hent(url, forsoeg=1, timeout=20)
         except Exception as e:
             print(f"  ADVARSEL: søgning union {union} fejlede: {e}", file=sys.stderr)
             continue
