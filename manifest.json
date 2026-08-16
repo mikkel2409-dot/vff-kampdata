@@ -1,0 +1,13 @@
+{
+  "name": "Viborg FF Kampprogram U13-U19",
+  "short_name": "Kampprogram",
+  "description": "Samlet kampprogram for Viborg FF's akademihold - opdateres automatisk fra DBU",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#14311F",
+  "theme_color": "#14311F",
+  "icons": [
+    { "src": "ikon-192.png", "sizes": "192x192", "type": "image/png" }
+  ]
+}
