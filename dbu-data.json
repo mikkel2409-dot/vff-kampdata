@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-17T05:07:08.302116+00:00",
+ "updated": "2026-08-18T05:01:49.318488+00:00",
  "teams": {
   "U19": [
    {
@@ -545,6 +545,21 @@
     "score_home": null,
     "score_away": null,
     "address": "Rughavevej 39 b, 8800 Viborg"
+   },
+   {
+    "team": "U14",
+    "kampnr": "229472",
+    "pulje": "512452",
+    "match_type": "venlig",
+    "date_iso": "2026-11-28",
+    "weekday": "lør.",
+    "time": "11:00",
+    "home_team": "Vejle B",
+    "away_team": "Viborg FF",
+    "venue": "VB Parken",
+    "score_home": null,
+    "score_away": null,
+    "address": "Hellumvej 9, 7100 Vejle"
    }
   ],
   "U15": [
