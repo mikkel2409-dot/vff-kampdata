@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-19T05:01:26.873651+00:00",
+ "updated": "2026-08-20T05:03:27.087802+00:00",
  "teams": {
   "U19": [
    {
@@ -139,6 +139,21 @@
    },
    {
     "team": "U19",
+    "kampnr": "313891",
+    "pulje": "508670",
+    "match_type": "liga",
+    "date_iso": "2026-11-03",
+    "weekday": "tirs.",
+    "time": "17:30",
+    "home_team": "Vejle",
+    "away_team": "Viborg FF",
+    "venue": "VB Parken",
+    "score_home": null,
+    "score_away": null,
+    "address": "Hellumvej 9, 7100 Vejle"
+   },
+   {
+    "team": "U19",
     "kampnr": "313878",
     "pulje": "508670",
     "match_type": "liga",
@@ -166,21 +181,6 @@
     "score_home": null,
     "score_away": null,
     "address": "Sdr. Boulevard 172, 5000 Odense C"
-   },
-   {
-    "team": "U19",
-    "kampnr": "313891",
-    "pulje": "508670",
-    "match_type": "liga",
-    "date_iso": "2026-12-05",
-    "weekday": "lør.",
-    "time": "12:30",
-    "home_team": "Vejle",
-    "away_team": "Viborg FF",
-    "venue": "VB Parken",
-    "score_home": null,
-    "score_away": null,
-    "address": "Hellumvej 9, 7100 Vejle"
    }
   ],
   "U13": [
@@ -583,9 +583,9 @@
     "kampnr": "442239",
     "pulje": "504076",
     "match_type": "pokal",
-    "date_iso": "2026-09-01",
-    "weekday": "tirs.",
-    "time": "19:00",
+    "date_iso": "2026-08-26",
+    "weekday": "ons.",
+    "time": "18:00",
     "home_team": "Sorring/Voel",
     "away_team": "Viborg FF",
     "venue": "Voel Stadion",
@@ -1080,9 +1080,9 @@
     "kampnr": "312443",
     "pulje": "508668",
     "match_type": "liga",
-    "date_iso": "2026-10-17",
-    "weekday": "lør.",
-    "time": "14:45",
+    "date_iso": "2026-10-15",
+    "weekday": "tors.",
+    "time": "12:30",
     "home_team": "Viborg FF",
     "away_team": "AGF",
     "venue": "Viborg FF´s anlæg",
@@ -1167,21 +1167,6 @@
    },
    {
     "team": "U17",
-    "kampnr": "198687",
-    "pulje": "511880",
-    "match_type": "u16cup",
-    "date_iso": "2026-12-05",
-    "weekday": "lør.",
-    "time": "",
-    "home_team": "Viborg FF",
-    "away_team": "Hobro IK",
-    "venue": "Viborg FF´s anlæg",
-    "score_home": null,
-    "score_away": null,
-    "address": "Rughavevej 39 b, 8800 Viborg"
-   },
-   {
-    "team": "U17",
     "kampnr": "312490",
     "pulje": "508668",
     "match_type": "liga",
@@ -1194,6 +1179,21 @@
     "score_home": null,
     "score_away": null,
     "address": "Hellumvej 9, 7100 Vejle"
+   },
+   {
+    "team": "U17",
+    "kampnr": "198687",
+    "pulje": "511880",
+    "match_type": "u16cup",
+    "date_iso": "2026-12-10",
+    "weekday": "tors.",
+    "time": "19:00",
+    "home_team": "Viborg FF",
+    "away_team": "Hobro IK",
+    "venue": "Viborg FF´s anlæg",
+    "score_home": null,
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    }
   ]
  }
