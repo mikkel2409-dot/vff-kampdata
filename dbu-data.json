@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-22T04:59:04.185944+00:00",
+ "updated": "2026-08-23T05:00:58.767030+00:00",
  "teams": {
   "U19": [
    {
@@ -43,8 +43,8 @@
     "home_team": "Viborg FF",
     "away_team": "FC Nordsjælland",
     "venue": "Viborg FF´s anlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 1,
+    "score_away": 0,
     "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
@@ -210,8 +210,8 @@
     "home_team": "FK Viborg",
     "away_team": "Randers Freja",
     "venue": "Viborg FF´s anlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 3,
+    "score_away": 4,
     "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
@@ -392,8 +392,8 @@
     "home_team": "FK Viborg",
     "away_team": "Randers Freja",
     "venue": "Viborg FF´s anlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 1,
+    "score_away": 1,
     "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
@@ -966,8 +966,8 @@
     "home_team": "Viborg FF",
     "away_team": "FC Nordsjælland",
     "venue": "Viborg FF´s anlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 1,
+    "score_away": 2,
     "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
