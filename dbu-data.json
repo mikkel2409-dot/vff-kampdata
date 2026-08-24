@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-23T05:00:58.767030+00:00",
+ "updated": "2026-08-24T05:10:41.007071+00:00",
  "teams": {
   "U19": [
    {
@@ -670,21 +670,6 @@
    },
    {
     "team": "U15",
-    "kampnr": "310683",
-    "pulje": "508665",
-    "match_type": "liga",
-    "date_iso": "2026-10-17",
-    "weekday": "lør.",
-    "time": "12:30",
-    "home_team": "Viborg FF",
-    "away_team": "AGF",
-    "venue": "Viborg FF´s anlæg",
-    "score_home": null,
-    "score_away": null,
-    "address": "Rughavevej 39 b, 8800 Viborg"
-   },
-   {
-    "team": "U15",
     "kampnr": "310693",
     "pulje": "508665",
     "match_type": "liga",
@@ -783,6 +768,21 @@
     "time": "12:30",
     "home_team": "Viborg FF",
     "away_team": "HB Køge",
+    "venue": "Viborg FF´s anlæg",
+    "score_home": null,
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
+   },
+   {
+    "team": "U15",
+    "kampnr": "310683",
+    "pulje": "508665",
+    "match_type": "liga",
+    "date_iso": "2027-03-24",
+    "weekday": "ons.",
+    "time": "12:30",
+    "home_team": "Viborg FF",
+    "away_team": "AGF",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
     "score_away": null,
