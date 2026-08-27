@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-26T05:04:09.760972+00:00",
+ "updated": "2026-08-27T15:23:19.958984+00:00",
  "teams": {
   "U19": [
    {
@@ -589,8 +589,8 @@
     "home_team": "Sorring/Voel",
     "away_team": "Viborg FF",
     "venue": "Voel Stadion",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 0,
+    "score_away": 2,
     "address": "Sorringvej 28, 8600 Silkeborg"
    },
    {
