@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-27T15:23:19.958984+00:00",
+ "updated": "2026-08-28T16:47:29.057747+00:00",
  "teams": {
   "U19": [
    {
@@ -1032,21 +1032,6 @@
    },
    {
     "team": "U17",
-    "kampnr": "194218",
-    "pulje": "511880",
-    "match_type": "u16cup",
-    "date_iso": "2026-09-26",
-    "weekday": "lør.",
-    "time": "",
-    "home_team": "Vendsyssel FF",
-    "away_team": "Viborg FF",
-    "venue": "Hjørring IF's Anlæg",
-    "score_home": null,
-    "score_away": null,
-    "address": "Landlyst 9, 9800 Hjørring"
-   },
-   {
-    "team": "U17",
     "kampnr": "196107",
     "pulje": "511880",
     "match_type": "u16cup",
@@ -1194,6 +1179,21 @@
     "score_home": null,
     "score_away": null,
     "address": "Rughavevej 39 b, 8800 Viborg"
+   },
+   {
+    "team": "U17",
+    "kampnr": "194218",
+    "pulje": "511880",
+    "match_type": "u16cup",
+    "date_iso": "2027-02-06",
+    "weekday": "lør.",
+    "time": "12:30",
+    "home_team": "Vendsyssel FF",
+    "away_team": "Viborg FF",
+    "venue": "Hjørring IF's Anlæg",
+    "score_home": null,
+    "score_away": null,
+    "address": "Landlyst 9, 9800 Hjørring"
    }
   ]
  }
