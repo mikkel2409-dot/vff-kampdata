@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-31T11:01:46.162898+00:00",
+ "updated": "2026-09-01T09:32:07.324076+00:00",
  "teams": {
   "U19": [
    {
@@ -236,13 +236,13 @@
     "match_type": "liga",
     "date_iso": "2026-09-12",
     "weekday": "lør.",
-    "time": "12:00",
-    "home_team": "FK Viborg",
-    "away_team": "AaB",
-    "venue": "Viborg FF´s anlæg",
+    "time": "10:00",
+    "home_team": "AaB",
+    "away_team": "FK Viborg",
+    "venue": "AaB's Anlæg",
     "score_home": null,
     "score_away": null,
-    "address": "Rughavevej 39 b, 8800 Viborg"
+    "address": "Hornevej 2, 9220 Aalborg Øst"
    },
    {
     "team": "U13",
@@ -327,12 +327,12 @@
     "date_iso": "2026-11-07",
     "weekday": "lør.",
     "time": "10:00",
-    "home_team": "AaB",
-    "away_team": "FK Viborg",
-    "venue": "AaB's Anlæg",
+    "home_team": "FK Viborg",
+    "away_team": "AaB",
+    "venue": "Viborg FF´s anlæg",
     "score_home": null,
     "score_away": null,
-    "address": "Hornevej 2, 9220 Aalborg Øst"
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U13",
@@ -418,13 +418,13 @@
     "match_type": "liga",
     "date_iso": "2026-09-12",
     "weekday": "lør.",
-    "time": "12:00",
-    "home_team": "FK Viborg",
-    "away_team": "AaB",
-    "venue": "Viborg FF´s anlæg",
+    "time": "10:30",
+    "home_team": "AaB",
+    "away_team": "FK Viborg",
+    "venue": "AaB's Anlæg",
     "score_home": null,
     "score_away": null,
-    "address": "Rughavevej 39 b, 8800 Viborg"
+    "address": "Hornevej 2, 9220 Aalborg Øst"
    },
    {
     "team": "U14",
@@ -508,13 +508,13 @@
     "match_type": "liga",
     "date_iso": "2026-11-07",
     "weekday": "lør.",
-    "time": "11:00",
-    "home_team": "AaB",
-    "away_team": "FK Viborg",
-    "venue": "AaB's Anlæg",
+    "time": "12:00",
+    "home_team": "FK Viborg",
+    "away_team": "AaB",
+    "venue": "Viborg FF´s anlæg",
     "score_home": null,
     "score_away": null,
-    "address": "Hornevej 2, 9220 Aalborg Øst"
+    "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
     "team": "U14",
