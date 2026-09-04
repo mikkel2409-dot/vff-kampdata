@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-03T09:04:29.366415+00:00",
+ "updated": "2026-09-04T08:57:52.813949+00:00",
  "teams": {
   "U19": [
    {
@@ -82,9 +82,9 @@
     "kampnr": "313827",
     "pulje": "508670",
     "match_type": "liga",
-    "date_iso": "2026-09-19",
-    "weekday": "lør.",
-    "time": "12:30",
+    "date_iso": "2026-09-24",
+    "weekday": "tors.",
+    "time": "13:00",
     "home_team": "Viborg FF",
     "away_team": "Brøndby",
     "venue": "Viborg FF´s anlæg",
