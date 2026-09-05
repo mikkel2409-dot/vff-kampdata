@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-04T08:57:52.813949+00:00",
+ "updated": "2026-09-05T08:28:16.199071+00:00",
  "teams": {
   "U19": [
    {
@@ -648,6 +648,21 @@
     "time": "12:00",
     "home_team": "Viborg FF",
     "away_team": "Farum Boldklub",
+    "venue": "Viborg FF´s anlæg",
+    "score_home": null,
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
+   },
+   {
+    "team": "U15",
+    "kampnr": "116128",
+    "pulje": "504076",
+    "match_type": "pokal",
+    "date_iso": "2026-09-29",
+    "weekday": "tirs.",
+    "time": "18:00",
+    "home_team": "Viborg FF",
+    "away_team": "Thisted FC",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
     "score_away": null,
