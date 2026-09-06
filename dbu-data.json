@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-05T08:28:16.199071+00:00",
+ "updated": "2026-09-06T08:46:30.928054+00:00",
  "teams": {
   "U19": [
    {
@@ -58,8 +58,8 @@
     "home_team": "Lyngby",
     "away_team": "Viborg FF",
     "venue": "Lyngby Stadion",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 2,
+    "score_away": 1,
     "address": "Lundtoftevej 61, 2800 Kgs.Lyngby"
    },
    {
@@ -225,8 +225,8 @@
     "home_team": "Silkeborg IF",
     "away_team": "FK Viborg",
     "venue": "Søholt Idrætsanlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 2,
+    "score_away": 2,
     "address": "Ansvej 110, 8600 Silkeborg"
    },
    {
@@ -407,8 +407,8 @@
     "home_team": "Silkeborg IF",
     "away_team": "FK Viborg",
     "venue": "Søholt Idrætsanlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 4,
+    "score_away": 4,
     "address": "Ansvej 110, 8600 Silkeborg"
    },
    {
@@ -440,6 +440,21 @@
     "score_home": null,
     "score_away": null,
     "address": "Ringkøbingvej 78, 7400 Herning"
+   },
+   {
+    "team": "U14",
+    "kampnr": "127042",
+    "pulje": "504077",
+    "match_type": "pokal",
+    "date_iso": "2026-09-24",
+    "weekday": "tors.",
+    "time": "18:00",
+    "home_team": "HEI (L2C/623)",
+    "away_team": "FK Viborg",
+    "venue": "Invita Arena, Skæring",
+    "score_home": null,
+    "score_away": null,
+    "address": "Skæring Skolevej 200, 8250 Egå"
    },
    {
     "team": "U14",
@@ -604,8 +619,8 @@
     "home_team": "Lyngby",
     "away_team": "Viborg FF",
     "venue": "Lyngby Stadion",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 7,
+    "score_away": 1,
     "address": "Lundtoftevej 61, 2800 Kgs.Lyngby"
    },
    {
@@ -1011,8 +1026,8 @@
     "home_team": "Lyngby",
     "away_team": "Viborg FF",
     "venue": "Lyngby Stadion",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 6,
+    "score_away": 2,
     "address": "Lundtoftevej 61, 2800 Kgs.Lyngby"
    },
    {
