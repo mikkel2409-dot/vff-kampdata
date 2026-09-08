@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-08T08:58:28.679258+00:00",
+ "updated": "2026-09-08T10:46:29.586849+00:00",
  "teams": {
   "U19": [
    {
@@ -261,21 +261,6 @@
    },
    {
     "team": "U14",
-    "kampnr": "127042",
-    "pulje": "504077",
-    "match_type": "pokal",
-    "date_iso": "2026-09-24",
-    "weekday": "tors.",
-    "time": "18:00",
-    "home_team": "HEI (L2C/623)",
-    "away_team": "FK Viborg",
-    "venue": "Invita Arena, Skæring",
-    "score_home": null,
-    "score_away": null,
-    "address": "Skæring Skolevej 200, 8250 Egå"
-   },
-   {
-    "team": "U14",
     "kampnr": "527444",
     "pulje": "502346",
     "match_type": "liga",
@@ -288,6 +273,21 @@
     "score_home": null,
     "score_away": null,
     "address": "Terp Skovvej 16, 8260 Viby J"
+   },
+   {
+    "team": "U14",
+    "kampnr": "127042",
+    "pulje": "504077",
+    "match_type": "pokal",
+    "date_iso": "2026-09-30",
+    "weekday": "ons.",
+    "time": "19:00",
+    "home_team": "HEI",
+    "away_team": "FK Viborg",
+    "venue": "Invita Park Kunstgræs, Skæring",
+    "score_home": null,
+    "score_away": null,
+    "address": "Skæring Skolevej 200, 8250 Egå"
    },
    {
     "team": "U14",
@@ -413,21 +413,6 @@
    },
    {
     "team": "U15",
-    "kampnr": "442239",
-    "pulje": "504076",
-    "match_type": "pokal",
-    "date_iso": "2026-08-26",
-    "weekday": "ons.",
-    "time": "18:00",
-    "home_team": "Sorring/Voel",
-    "away_team": "Viborg FF",
-    "venue": "Voel Stadion",
-    "score_home": 0,
-    "score_away": 2,
-    "address": "Sorringvej 28, 8600 Silkeborg"
-   },
-   {
-    "team": "U15",
     "kampnr": "310626",
     "pulje": "508665",
     "match_type": "liga",
@@ -488,18 +473,18 @@
    },
    {
     "team": "U15",
-    "kampnr": "116128",
+    "kampnr": "116206",
     "pulje": "504076",
     "match_type": "pokal",
     "date_iso": "2026-09-29",
     "weekday": "tirs.",
     "time": "18:00",
-    "home_team": "Viborg FF",
-    "away_team": "Thisted FC",
-    "venue": "Viborg FF´s anlæg",
+    "home_team": "Dronningborg B",
+    "away_team": "FK Viborg",
+    "venue": "Dronningborg Stadion",
     "score_home": null,
     "score_away": null,
-    "address": "Rughavevej 39 b, 8800 Viborg"
+    "address": "Udbyhøjvej 191, 8930 Randers NØ"
    },
    {
     "team": "U15",

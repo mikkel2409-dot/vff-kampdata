@@ -1281,31 +1281,6 @@
     <section class="month-block" data-month="9" data-year="2026">
       <h2 class="month-title">September <span class="month-year">2026</span></h2>
       <div class="matches">
-        <div class="match-row away" data-team="U15" data-date="2026-09-01"
-             data-venue="Voel Stadion" data-address="Sorringvej 28, 8600 Silkeborg" data-home="Sorring/Voel" data-away="Viborg FF"
-             data-time="19:00" data-weekday="tirsdag" data-daydisplay="01."
-             data-month="September" data-year="2026" data-side="UDE" data-matchtype="pokal" data-type="Pokalkamp" data-dbu-kampnr="442239">
-          <div class="match-date">
-            <span class="daynum">01.</span>
-            <span class="weekday">tirsdag</span>
-          </div>
-          <div class="match-team-tag"><span class="team-tag team-U15">U15</span></div>
-          <div class="match-main">
-            <div class="match-fixture">
-              <span class="fixture-home">Sorring/Voel</span>
-              <span class="fixture-vs">–</span>
-              <span class="fixture-away">Viborg FF</span>
-            </div>
-            <div class="match-venue"><i class="ti ti-ticket"></i>Pokalkamp</div>
-          </div>
-          <div class="match-time">19:00</div>
-          <div class="match-score" data-match-id="U15-2026-09-01-19:00">
-            <input type="text" inputmode="numeric" maxlength="2" class="score-input score-home" placeholder="–" aria-label="Mål Sorring/Voel" onclick="event.stopPropagation()">
-            <span class="score-sep">-</span>
-            <input type="text" inputmode="numeric" maxlength="2" class="score-input score-away" placeholder="–" aria-label="Mål Viborg FF" onclick="event.stopPropagation()">
-          </div>
-          <div class="match-side away">UDE</div>
-        </div>
         <div class="match-row away" data-team="U13" data-date="2026-09-05"
              data-venue="Søholt Idrætsanlæg" data-address="Ansvej 110, 8600 Silkeborg" data-home="Silkeborg IF" data-away="Viborg FF"
              data-time="11:00" data-weekday="lørdag" data-daydisplay="05."
@@ -1799,7 +1774,31 @@
           </div>
           <div class="match-side away">UDE</div>
         </div>
-        
+        <div class="match-row away" data-team="U15" data-date="2026-09-29"
+             data-venue="Dronningborg Stadion" data-address="Udbyhøjvej 191, 8930 Randers NØ" data-home="Dronningborg B" data-away="Viborg FF"
+             data-time="18:00" data-weekday="tirsdag" data-daydisplay="29."
+             data-month="September" data-year="2026" data-side="UDE" data-matchtype="pokal" data-type="Pokalkamp" data-dbu-kampnr="116206">
+          <div class="match-date">
+            <span class="daynum">29.</span>
+            <span class="weekday">tirsdag</span>
+          </div>
+          <div class="match-team-tag"><span class="team-tag team-U15">U15</span></div>
+          <div class="match-main">
+            <div class="match-fixture">
+              <span class="fixture-home">Dronningborg B</span>
+              <span class="fixture-vs">–</span>
+              <span class="fixture-away">Viborg FF</span>
+            </div>
+            <div class="match-venue"><i class="ti ti-ticket"></i>Pokalkamp</div>
+          </div>
+          <div class="match-time">18:00</div>
+          <div class="match-score" data-match-id="U15-2026-09-29-18:00">
+            <input type="text" inputmode="numeric" maxlength="2" class="score-input score-home" placeholder="–" aria-label="Mål Dronningborg B" onclick="event.stopPropagation()">
+            <span class="score-sep">-</span>
+            <input type="text" inputmode="numeric" maxlength="2" class="score-input score-away" placeholder="–" aria-label="Mål Viborg FF" onclick="event.stopPropagation()">
+          </div>
+          <div class="match-side away">UDE</div>
+        </div>
       </div>
       <p class="empty-msg" style="display:none;">Ingen kampe i denne periode.</p>
     </section>
@@ -4132,6 +4131,28 @@
     // (Den gamle blanket-oprydning, der slettede ALLE redigeringer af trænings-/
     // stævnekampe ved hver indlæsning, er fjernet: den åd både brugerens egne
     // rettelser og DBU-synkens lovlige flytninger af DBU-koblede træningskampe.)
+
+    // Engangsoprydning (sep. 2026): to U15-pokalkampe tilhørte klubbens ANDETHOLD
+    // (Liga 2) og skulle aldrig have været på akademiets program. De kan ligge
+    // gemt i browseren som autooprettede kampe - fjern dem, så de ikke i stedet
+    // bliver stående med et "Tjek DBU"-flag.
+    var ANDETHOLD_KAMPE = ['442239', '116128'];
+    var andetholdFjernet = 0;
+    Object.keys(customState.added).forEach(function(id) {
+      var cm = customState.added[id];
+      if (cm && ANDETHOLD_KAMPE.indexOf(String(cm.kampnr)) > -1) {
+        delete customState.added[id];
+        removeCustomRowFromDOM(id);
+        andetholdFjernet++;
+      }
+    });
+    ANDETHOLD_KAMPE.forEach(function(nr) {
+      if (customState.flagged) delete customState.flagged[nr];
+    });
+    if (andetholdFjernet > 0) {
+      saveCustomState();
+      console.log('Oprydning: ' + andetholdFjernet + ' andetholds-pokalkamp(e) fjernet.');
+    }
 
     // Oprydning: redigeringsposter, der er identiske med kampens indbyggede data
     // (typisk efterladt af den gamle synk-fejl ved to kampe mod samme modstander),

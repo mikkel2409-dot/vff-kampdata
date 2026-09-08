@@ -55,14 +55,29 @@ def hent(url, forsoeg=2, timeout=30):
 
 
 def normaliser_holdnavn(navn):
-    """Fjern DBU's holdsuffikser: 'Viborg FF (1)', 'Viborg FF (L2/512)', 'AC Horsens U14'."""
+    """Fjern DBU's holdsuffikser: 'Viborg FF (1)', 'Viborg FF (L2/512)',
+    'FK Viborg (Liga)', 'Viborg FF (L2C/622)', 'AC Horsens U14'."""
     navn = navn.strip()
-    navn = re.sub(r"\s*\((?:\d+|L\d+/\d+)\)$", "", navn)
+    navn = re.sub(r"\s*\((?:\d+|Liga|L[0-9A-Z]+(?:/\d+)?)\)$", "", navn)
     navn = re.sub(r"\s+U\d{2}$", "", navn)
     return navn.strip()
 
 
-VIBORG_ALIASER = {KLUBNAVN, "FK Viborg"}  # DBU Jylland-puljer skriver "FK Viborg"
+def hold_markoer(navn):
+    """DBU's raekkemarkoer, som pokalpuljer saetter efter holdnavnet:
+    'FK Viborg (Liga)' -> 'LIGA', 'FK Viborg (L1/601)' -> 'L1',
+    'Viborg FF (L2C/622)' -> 'L2C'. None hvis holdet ikke baerer en markoer."""
+    m = re.search(r"\((Liga|L[0-9A-Z]+?)(?:/\d+)?\)$", navn.strip())
+    return m.group(1).upper() if m else None
+
+
+# Akademiets foerstehold spiller i Ligaen (U15/U17/U19) eller Liga 1 (U13/U14).
+# Klubbens andethold (Liga 2, 2C, 3, 4, C-hold) stiller ogsaa op i pokalen,
+# men hoerer ikke til paa akademiets kampprogram.
+FOERSTEHOLD_MARKOERER = {"LIGA", "L1"}
+
+VIBORG_ALIASER = {KLUBNAVN, "FK Viborg"}  # DBU skriver begge dele: U13/U14 og
+                                          # pokal-foersteholdene hedder "FK Viborg"
 
 
 def er_viborg(navn):
@@ -167,6 +182,8 @@ def parse_pulje(pulje_id, info):
         if not m:
             continue
         stadium_m = re.search(r"/resultater/stadium/(\d+)", del_[:6000])
+        id_for_navn = {n.strip(): h for h, n in
+                       re.findall(r'href="/resultater/hold/(\d+)_\d+"[^>]*>([^<]+)<', del_[:6000])}
         celler = parse_celler(del_[:6000])
         # celle 0 er tom/ikon; find kampnr-cellen og læs positionsbaseret derfra
         try:
@@ -179,8 +196,33 @@ def parse_pulje(pulje_id, info):
         ude = celler[nr_i + 4] if len(celler) > nr_i + 4 else ""
         sted = celler[nr_i + 5] if len(celler) > nr_i + 5 else ""
         res = celler[nr_i + 6] if len(celler) > nr_i + 6 else ""
-        if dato is None or not (er_viborg(hjemme) or er_viborg(ude)):
+        vi_hjemme, vi_ude = er_viborg(hjemme), er_viborg(ude)
+        if dato is None or not (vi_hjemme or vi_ude):
             continue
+
+        # I pokalpuljer stiller klubben BAADE akademiets foerstehold og et andethold.
+        # Foerste gang udpeges akademiets hold paa DBU's raekkemarkoer, og holdets
+        # id gemmes i puljer.json - derefter er id'et alene afgoerende, saa et
+        # aendret holdnavn ikke kan snyde filteret.
+        if info["type"] == "pokal":
+            vores_navn = hjemme if vi_hjemme else ude
+            vores_id = id_for_navn.get(vores_navn)
+            kendt_id = info.get("holdid")
+            if kendt_id:
+                if vores_id != kendt_id:
+                    print(f"    pulje {pulje_id}: kamp {m.group(1)} udeladt - "
+                          f"'{vores_navn}' (id {vores_id}) er ikke akademiets hold "
+                          f"(forventet id {kendt_id})")
+                    continue
+            elif hold_markoer(vores_navn) in FOERSTEHOLD_MARKOERER and vores_id:
+                info["holdid"] = vores_id
+                print(f"    pulje {pulje_id}: akademiets hold udpeget som "
+                      f"'{vores_navn}' (id {vores_id})")
+            else:
+                print(f"    pulje {pulje_id}: kamp {m.group(1)} udeladt - '{vores_navn}' "
+                      f"er ikke akademiets hold (markoer: {hold_markoer(vores_navn) or 'ingen'})")
+                continue
+
         res_m = re.match(r"^(\d+)\s*-\s*(\d+)$", res)
         kampe.append({
             "team": info["aargang"],
