@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-13T09:39:37.358915+00:00",
+ "updated": "2026-09-14T10:02:23.245927+00:00",
  "teams": {
   "U19": [
    {
@@ -393,6 +393,21 @@
     "score_home": null,
     "score_away": null,
     "address": "Hellumvej 9, 7100 Vejle"
+   },
+   {
+    "team": "U14",
+    "kampnr": "794366",
+    "pulje": "512452",
+    "match_type": "venlig",
+    "date_iso": "2027-01-23",
+    "weekday": "lør.",
+    "time": "15:00",
+    "home_team": "Viborg FF",
+    "away_team": "AaB",
+    "venue": "Viborg FF´s anlæg",
+    "score_home": null,
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
    }
   ],
   "U15": [
@@ -844,7 +859,7 @@
     "home_team": "AaB",
     "away_team": "Viborg FF",
     "venue": "AaB's Anlæg",
-    "score_home": 0,
+    "score_home": 2,
     "score_away": 0,
     "address": "Hornevej 2, 9220 Aalborg Øst"
    },
@@ -1205,6 +1220,21 @@
     "time": "10:00",
     "home_team": "FK Viborg",
     "away_team": "Hobro IK",
+    "venue": "Viborg FF´s anlæg",
+    "score_home": null,
+    "score_away": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
+   },
+   {
+    "team": "U13",
+    "kampnr": "792865",
+    "pulje": "512464",
+    "match_type": "venlig",
+    "date_iso": "2027-01-23",
+    "weekday": "lør.",
+    "time": "10:00",
+    "home_team": "FK Viborg",
+    "away_team": "AaB",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
     "score_away": null,
