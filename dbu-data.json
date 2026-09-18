@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-17T09:34:26.133487+00:00",
+ "updated": "2026-09-18T09:06:43.538550+00:00",
  "teams": {
   "U19": [
    {
@@ -99,7 +99,7 @@
     "match_type": "liga",
     "date_iso": "2026-10-10",
     "weekday": "lør.",
-    "time": "12:00",
+    "time": "13:00",
     "home_team": "FC København",
     "away_team": "Viborg FF",
     "venue": "KB. P. Bangsvej",
@@ -508,7 +508,7 @@
     "match_type": "liga",
     "date_iso": "2026-10-10",
     "weekday": "lør.",
-    "time": "12:00",
+    "time": "13:00",
     "home_team": "FC København",
     "away_team": "Viborg FF",
     "venue": "Kunst, KB, P. Bangs Vej",
@@ -885,7 +885,7 @@
     "match_type": "liga",
     "date_iso": "2026-10-10",
     "weekday": "lør.",
-    "time": "14:15",
+    "time": "15:15",
     "home_team": "FC København",
     "away_team": "Viborg FF",
     "venue": "Kunst, KB, P. Bangs Vej",
@@ -1085,7 +1085,7 @@
     "time": "10:30",
     "home_team": "Herning Fremad",
     "away_team": "FK Viborg",
-    "venue": "Herning Fremad's Kunstgræsbane 2",
+    "venue": "Herning Fremads Anlæg",
     "score_home": null,
     "score_away": null,
     "address": "Ringkøbingvej 78, 7400 Herning"
