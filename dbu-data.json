@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-19T08:53:35.442046+00:00",
+ "updated": "2026-09-20T09:23:27.138946+00:00",
  "teams": {
   "U19": [
    {
@@ -255,8 +255,8 @@
     "home_team": "Herning Fremad",
     "away_team": "FK Viborg",
     "venue": "Herning Fremad's Kunstgræsbane 2",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 6,
+    "score_away": 3,
     "address": "Ringkøbingvej 78, 7400 Herning"
    },
    {
@@ -467,8 +467,8 @@
     "home_team": "Viborg FF",
     "away_team": "Brøndby IF",
     "venue": "Viborg FF´s anlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 0,
+    "score_away": 3,
     "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
@@ -859,8 +859,8 @@
     "home_team": "Viborg FF",
     "away_team": "Brøndby",
     "venue": "Viborg FF´s anlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 0,
+    "score_away": 4,
     "address": "Rughavevej 39 b, 8800 Viborg"
    },
    {
@@ -1086,8 +1086,8 @@
     "home_team": "Herning Fremad",
     "away_team": "FK Viborg",
     "venue": "Herning Fremads Anlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 7,
+    "score_away": 2,
     "address": "Ringkøbingvej 78, 7400 Herning"
    },
    {
