@@ -111,6 +111,44 @@ def parse_celler(raekke_html):
     return [re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", c)).strip() for c in celler]
 
 
+# Straffesparkskonkurrencen. DBU sætter et mærke med en tooltip INDE i vinderens
+# mål-felt i resultat-cellen (U15-ligaen sender uafgjorte kampe til straffespark):
+#   <div class="home-score"><div class="penalty-result-badge _home"> <img .../>
+#     <div class="tool-tip"> Straffesparkskonkurrence <br /> 7 - 6 </div> </div> 2 </div>
+#   <div> - </div> <div class="away-score"> 2 </div>
+# Som ren tekst står der «Straffesparkskonkurrence 7 - 6 2 - 2», og indtil 23/9-26
+# blev resultatet derfor slet ikke læst (U15 mod AaB 12/9 manglede sit 2-2).
+STRAFFE_TEKST = re.compile(r"straffespark\w*\s*(-?\d+)\s*-\s*(-?\d+)", re.IGNORECASE)
+STRAFFE_SIDE = re.compile(r"penalty-result-badge\s+_(home|away)\b")
+
+
+def parse_resultat(celle_html):
+    """Resultat-cellen -> (hjemme, ude, straffe). Alt er None uden et resultat.
+
+    `straffe` er None uden straffesparkskonkurrence, ellers
+    {"winner": "home"/"away", "winner_goals": 7, "loser_goals": 6}. Vinderen er
+    mærkets side. Tallene gemmes som vinderens og taberens - det største er
+    vinderens - så rækkefølgen i tooltip'en er ligegyldig. Urimelige tal (DBU
+    har vist «43 - -1») giver vinderen uden tal.
+    """
+    tekst = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", celle_html)).strip()
+    straffe = None
+    side_m = STRAFFE_SIDE.search(celle_html)
+    if side_m:
+        straffe = {"winner": side_m.group(1), "winner_goals": None, "loser_goals": None}
+        tal_m = STRAFFE_TEKST.search(tekst)
+        if tal_m:
+            a, b = int(tal_m.group(1)), int(tal_m.group(2))
+            if min(a, b) >= 0 and max(a, b) <= 30 and a != b:
+                straffe["winner_goals"], straffe["loser_goals"] = max(a, b), min(a, b)
+    # Tooltip'en ud - den står foran vinderens mål, hvad enten det er hjemme eller ude
+    rest = re.sub(r"\s+", " ", STRAFFE_TEKST.sub(" ", tekst)).strip()
+    res_m = re.match(r"^(\d+)\s*-\s*(\d+)$", rest)
+    if not res_m:
+        return None, None, None
+    return int(res_m.group(1)), int(res_m.group(2)), straffe
+
+
 def parse_dato(tekst):
     """'lør. 15-08 2026' eller '15-08 2026' -> date."""
     m = re.search(r"(\d{2})-(\d{2})\s+(\d{4})", tekst)
@@ -185,6 +223,8 @@ def parse_pulje(pulje_id, info):
         id_for_navn = {n.strip(): h for h, n in
                        re.findall(r'href="/resultater/hold/(\d+)_\d+"[^>]*>([^<]+)<', del_[:6000])}
         celler = parse_celler(del_[:6000])
+        # Samme celler som HTML - resultat-cellens straffespark ses kun dér
+        raa_celler = re.findall(r"<td[^>]*>([\s\S]*?)</td>", del_[:6000])
         # celle 0 er tom/ikon; find kampnr-cellen og læs positionsbaseret derfra
         try:
             nr_i = next(i for i, c in enumerate(celler) if c == m.group(1))
@@ -195,7 +235,7 @@ def parse_pulje(pulje_id, info):
         hjemme = celler[nr_i + 3] if len(celler) > nr_i + 3 else ""
         ude = celler[nr_i + 4] if len(celler) > nr_i + 4 else ""
         sted = celler[nr_i + 5] if len(celler) > nr_i + 5 else ""
-        res = celler[nr_i + 6] if len(celler) > nr_i + 6 else ""
+        res_html = raa_celler[nr_i + 6] if len(raa_celler) > nr_i + 6 else ""
         vi_hjemme, vi_ude = er_viborg(hjemme), er_viborg(ude)
         if dato is None or not (vi_hjemme or vi_ude):
             continue
@@ -223,7 +263,7 @@ def parse_pulje(pulje_id, info):
                       f"er ikke akademiets hold (markoer: {hold_markoer(vores_navn) or 'ingen'})")
                 continue
 
-        res_m = re.match(r"^(\d+)\s*-\s*(\d+)$", res)
+        score_home, score_away, straffe = parse_resultat(res_html)
         kampe.append({
             "team": info["aargang"],
             "kampnr": m.group(1),
@@ -236,8 +276,12 @@ def parse_pulje(pulje_id, info):
             "away_team": normaliser_holdnavn(ude),
             "venue": sted,
             "stadium": stadium_m.group(1) if stadium_m else None,
-            "score_home": int(res_m.group(1)) if res_m else None,
-            "score_away": int(res_m.group(2)) if res_m else None,
+            "score_home": score_home,
+            "score_away": score_away,
+            # Straffesparkskonkurrencen: vinderens side og målene som vinder/taber
+            "penalty_winner": straffe["winner"] if straffe else None,
+            "penalty_winner_goals": straffe["winner_goals"] if straffe else None,
+            "penalty_loser_goals": straffe["loser_goals"] if straffe else None,
         })
     return kampe
 
