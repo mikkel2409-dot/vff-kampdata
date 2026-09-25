@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-24T09:25:24.861081+00:00",
+ "updated": "2026-09-25T09:43:13.144435+00:00",
  "teams": {
   "U19": [
    {
@@ -103,8 +103,8 @@
     "home_team": "Viborg FF",
     "away_team": "Brøndby",
     "venue": "Viborg FF´s anlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 2,
+    "score_away": 4,
     "penalty_winner": null,
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
