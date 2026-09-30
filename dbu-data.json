@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-29T10:49:38.747221+00:00",
+ "updated": "2026-09-30T10:37:17.298965+00:00",
  "teams": {
   "U19": [
    {
@@ -593,8 +593,8 @@
     "home_team": "Dronningborg B",
     "away_team": "FK Viborg",
     "venue": "Dronningborg Stadion",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 0,
+    "score_away": 10,
     "penalty_winner": null,
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
