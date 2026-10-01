@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-30T10:37:17.298965+00:00",
+ "updated": "2026-10-01T11:05:59.368057+00:00",
  "teams": {
   "U19": [
    {
@@ -339,8 +339,8 @@
     "home_team": "HEI",
     "away_team": "FK Viborg",
     "venue": "Invita Park Kunstgræs, Skæring",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 1,
+    "score_away": 4,
     "penalty_winner": null,
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
@@ -617,6 +617,24 @@
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
     "address": "Peter Bangs Vej 147, 2000 Frederiksberg"
+   },
+   {
+    "team": "U15",
+    "kampnr": "946059",
+    "pulje": "504076",
+    "match_type": "pokal",
+    "date_iso": "2026-10-20",
+    "weekday": "tirs.",
+    "time": "17:00",
+    "home_team": "Herning Fremad",
+    "away_team": "FK Viborg",
+    "venue": "Herning Fremads Anlæg",
+    "score_home": null,
+    "score_away": null,
+    "penalty_winner": null,
+    "penalty_winner_goals": null,
+    "penalty_loser_goals": null,
+    "address": "Ringkøbingvej 78, 7400 Herning"
    },
    {
     "team": "U15",
