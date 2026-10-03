@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T10:37:56.945233+00:00",
+ "updated": "2026-10-03T09:58:23.064926+00:00",
  "teams": {
   "U19": [
    {
@@ -357,8 +357,8 @@
     "home_team": "FK Viborg",
     "away_team": "Herning Fremad",
     "venue": "Viborg FF´s anlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 2,
+    "score_away": 3,
     "penalty_winner": null,
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
@@ -1081,8 +1081,8 @@
     "home_team": "Viborg FF",
     "away_team": "AC Horsens",
     "venue": "Viborg FF´s anlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 3,
+    "score_away": 1,
     "penalty_winner": null,
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
@@ -1389,8 +1389,8 @@
     "home_team": "FK Viborg",
     "away_team": "Herning Fremad",
     "venue": "Viborg FF´s anlæg",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 4,
+    "score_away": 3,
     "penalty_winner": null,
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
