@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T10:41:37.516138+00:00",
+ "updated": "2026-10-04T17:34:13.678925+00:00",
  "teams": {
   "U19": [
    {
@@ -1395,6 +1395,24 @@
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
     "address": "Rughavevej 39 b, 8800 Viborg"
+   },
+   {
+    "team": "U13",
+    "kampnr": "969899",
+    "pulje": "512504",
+    "match_type": "venlig",
+    "date_iso": "2026-10-18",
+    "weekday": "søn.",
+    "time": "11:00",
+    "home_team": "Aalborg KFUM",
+    "away_team": "Viborg FF",
+    "venue": "Genoptræning Danmark Arena (KFUM)",
+    "score_home": null,
+    "score_away": null,
+    "penalty_winner": null,
+    "penalty_winner_goals": null,
+    "penalty_loser_goals": null,
+    "address": "Under Lien 60, 9000 Aalborg"
    },
    {
     "team": "U13",
