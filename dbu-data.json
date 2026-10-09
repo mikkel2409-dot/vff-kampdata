@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T11:30:58.968815+00:00",
+ "updated": "2026-10-09T11:26:29.064879+00:00",
  "teams": {
   "U19": [
    {
@@ -1503,6 +1503,24 @@
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
     "address": "Rughavevej 39 b, 8800 Viborg"
+   },
+   {
+    "team": "U13",
+    "kampnr": "425190",
+    "pulje": "512464",
+    "match_type": "venlig",
+    "date_iso": "2026-11-28",
+    "weekday": "lør.",
+    "time": "14:15",
+    "home_team": "Vejle B U13 Dr. 11:11 3x20 min.",
+    "away_team": "FK Viborg",
+    "venue": "VB Parken",
+    "score_home": null,
+    "score_away": null,
+    "penalty_winner": null,
+    "penalty_winner_goals": null,
+    "penalty_loser_goals": null,
+    "address": "Hellumvej 9, 7100 Vejle"
    },
    {
     "team": "U13",
