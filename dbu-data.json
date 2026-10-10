@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T10:44:02.451296+00:00",
+ "updated": "2026-10-10T17:51:10.539513+00:00",
  "teams": {
   "U19": [
    {
@@ -121,8 +121,8 @@
     "home_team": "FC København",
     "away_team": "Viborg FF",
     "venue": "KB. P. Bangsvej",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 6,
+    "score_away": 1,
     "penalty_winner": null,
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
@@ -629,8 +629,8 @@
     "home_team": "FC København",
     "away_team": "Viborg FF",
     "venue": "Kunst, KB, P. Bangs Vej",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 3,
+    "score_away": 1,
     "penalty_winner": null,
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
@@ -1099,8 +1099,8 @@
     "home_team": "FC København",
     "away_team": "Viborg FF",
     "venue": "Kunst, KB, P. Bangs Vej",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 3,
+    "score_away": 1,
     "penalty_winner": null,
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
