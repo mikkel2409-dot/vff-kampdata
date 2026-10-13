@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T12:17:05.888780+00:00",
+ "updated": "2026-10-13T12:00:37.839511+00:00",
  "teams": {
   "U19": [
    {
@@ -384,24 +384,6 @@
    },
    {
     "team": "U14",
-    "kampnr": "948587",
-    "pulje": "504077",
-    "match_type": "pokal",
-    "date_iso": "2026-10-29",
-    "weekday": "tors.",
-    "time": "17:00",
-    "home_team": "Skive IK",
-    "away_team": "FK Viborg",
-    "venue": "Sparekassen Danmark Anlæg, Egeris",
-    "score_home": null,
-    "score_away": null,
-    "penalty_winner": null,
-    "penalty_winner_goals": null,
-    "penalty_loser_goals": null,
-    "address": "Skyttevej 6, 7800 Skive"
-   },
-   {
-    "team": "U14",
     "kampnr": "527549",
     "pulje": "502346",
     "match_type": "liga",
@@ -417,6 +399,24 @@
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
     "address": "Rughavevej 39 b, 8800 Viborg"
+   },
+   {
+    "team": "U14",
+    "kampnr": "948587",
+    "pulje": "504077",
+    "match_type": "pokal",
+    "date_iso": "2026-11-05",
+    "weekday": "tors.",
+    "time": "17:45",
+    "home_team": "Skive IK",
+    "away_team": "FK Viborg",
+    "venue": "Sparekassen Danmark Anlæg, Egeris",
+    "score_home": null,
+    "score_away": null,
+    "penalty_winner": null,
+    "penalty_winner_goals": null,
+    "penalty_loser_goals": null,
+    "address": "Skyttevej 6, 7800 Skive"
    },
    {
     "team": "U14",
