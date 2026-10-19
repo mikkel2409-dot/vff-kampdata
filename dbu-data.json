@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T21:30:31.378835+00:00",
+ "updated": "2026-10-19T10:07:18.970775+00:00",
  "teams": {
   "U19": [
    {
@@ -205,9 +205,9 @@
     "kampnr": "313886",
     "pulje": "508670",
     "match_type": "liga",
-    "date_iso": "2026-11-28",
-    "weekday": "lør.",
-    "time": "12:30",
+    "date_iso": "2026-12-01",
+    "weekday": "tirs.",
+    "time": "17:00",
     "home_team": "OB",
     "away_team": "Viborg FF",
     "venue": "OB-Ådalen",
@@ -664,7 +664,7 @@
     "time": "17:00",
     "home_team": "Herning Fremad",
     "away_team": "FK Viborg",
-    "venue": "Herning Fremads Anlæg",
+    "venue": "Teglpark Stadion hybridbane",
     "score_home": null,
     "score_away": null,
     "penalty_winner": null,
