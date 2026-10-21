@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T09:33:09.972864+00:00",
+ "updated": "2026-10-21T09:29:04.448688+00:00",
  "teams": {
   "U19": [
    {
@@ -665,8 +665,8 @@
     "home_team": "Herning Fremad",
     "away_team": "FK Viborg",
     "venue": "Teglpark Stadion hybridbane",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 6,
+    "score_away": 5,
     "penalty_winner": null,
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
@@ -1234,6 +1234,24 @@
    },
    {
     "team": "U17",
+    "kampnr": "312490",
+    "pulje": "508668",
+    "match_type": "liga",
+    "date_iso": "2026-11-24",
+    "weekday": "tirs.",
+    "time": "16:00",
+    "home_team": "Vejle",
+    "away_team": "Viborg FF",
+    "venue": "VB Parken",
+    "score_home": null,
+    "score_away": null,
+    "penalty_winner": null,
+    "penalty_winner_goals": null,
+    "penalty_loser_goals": null,
+    "address": "Hellumvej 9, 7100 Vejle"
+   },
+   {
+    "team": "U17",
     "kampnr": "312485",
     "pulje": "508668",
     "match_type": "liga",
@@ -1249,24 +1267,6 @@
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
     "address": "Sdr. Boulevard 172, 5000 Odense C"
-   },
-   {
-    "team": "U17",
-    "kampnr": "312490",
-    "pulje": "508668",
-    "match_type": "liga",
-    "date_iso": "2026-12-05",
-    "weekday": "lør.",
-    "time": "12:30",
-    "home_team": "Vejle",
-    "away_team": "Viborg FF",
-    "venue": "VB Parken",
-    "score_home": null,
-    "score_away": null,
-    "penalty_winner": null,
-    "penalty_winner_goals": null,
-    "penalty_loser_goals": null,
-    "address": "Hellumvej 9, 7100 Vejle"
    },
    {
     "team": "U17",
