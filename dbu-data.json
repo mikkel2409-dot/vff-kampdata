@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T09:56:29.483645+00:00",
+ "updated": "2026-10-28T10:43:03.131626+00:00",
  "teams": {
   "U19": [
    {
@@ -1171,8 +1171,8 @@
     "home_team": "FS Holstebro",
     "away_team": "Viborg FF",
     "venue": "Ringkøbing Landbobank Kunstgræs (Mejrup)",
-    "score_home": null,
-    "score_away": null,
+    "score_home": 2,
+    "score_away": 1,
     "penalty_winner": null,
     "penalty_winner_goals": null,
     "penalty_loser_goals": null,
