@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T22:28:33.807387+00:00",
+ "updated": "2026-11-01T11:24:58.780280+00:00",
  "teams": {
   "U19": [
    {
@@ -500,6 +500,24 @@
     "time": "15:00",
     "home_team": "Viborg FF",
     "away_team": "AaB",
+    "venue": "Viborg FF´s anlæg",
+    "score_home": null,
+    "score_away": null,
+    "penalty_winner": null,
+    "penalty_winner_goals": null,
+    "penalty_loser_goals": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
+   },
+   {
+    "team": "U14",
+    "kampnr": "853403",
+    "pulje": "512452",
+    "match_type": "venlig",
+    "date_iso": "2027-02-07",
+    "weekday": "søn.",
+    "time": "12:00",
+    "home_team": "FK Viborg",
+    "away_team": "Vendsyssel FF",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
     "score_away": null,
@@ -1568,6 +1586,24 @@
     "time": "10:00",
     "home_team": "FK Viborg",
     "away_team": "AaB",
+    "venue": "Viborg FF´s anlæg",
+    "score_home": null,
+    "score_away": null,
+    "penalty_winner": null,
+    "penalty_winner_goals": null,
+    "penalty_loser_goals": null,
+    "address": "Rughavevej 39 b, 8800 Viborg"
+   },
+   {
+    "team": "U13",
+    "kampnr": "853402",
+    "pulje": "512464",
+    "match_type": "venlig",
+    "date_iso": "2027-02-07",
+    "weekday": "søn.",
+    "time": "10:00",
+    "home_team": "FK Viborg",
+    "away_team": "Vendsyssel FF",
     "venue": "Viborg FF´s anlæg",
     "score_home": null,
     "score_away": null,
